@@ -29,10 +29,13 @@ DLSS 5 Swapper sigue actualizandose desde su repositorio oficial.
 
 ## Streamline y requisitos
 
-El paquete publico no incluye DLL de terceros, modelos NVIDIA ni archivos de
-juegos. Se utiliza la cache Streamline existente. En un PC nuevo, si necesitas
-Streamline para DLSSG, puedes importarlo desde una instalacion compatible con
-`Guardar Streamline` en Profile Manager.
+El ZIP no incluye DLL de Streamline, modelos NVIDIA ni archivos de juegos. Al
+aplicar un perfil OptiScaler con DLSSG, Profile Manager usa Streamline completo
+del propio juego o la cache local. Si faltan los archivos, descarga Streamline
+SDK 2.12.0 directamente de NVIDIA, comprueba su SHA-256 y muestra el progreso.
+No reemplaza una instalacion completa; al reparar una carpeta incompleta,
+conserva una copia de seguridad. `Guardar Streamline` sigue disponible para
+importarlo manualmente desde otro juego.
 
 Windows PowerShell 5.1 y .NET Framework 4.x. Los ejecutables no estan firmados
 con Authenticode: Windows puede indicar que el editor es desconocido.
