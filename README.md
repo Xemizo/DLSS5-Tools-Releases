@@ -1,25 +1,48 @@
 # DLSS5 Tools
 
-Canal publico de descargas de DLSS5 Autoupdater y DLSS5 Profile Manager para
-Windows. El codigo fuente se mantiene en un repositorio privado separado.
+DLSS5 Autoupdater y DLSS5 Profile Manager para Windows 10/11 x64.
 
-## Estado
+## Descargar
 
-Canal en preparacion. Todavia no hay una version publicada aqui.
-Las versiones anteriores solo actualizan DLSS 5 Swapper, no las propias
-herramientas de DLSS5 Tools. No es necesario cambiar su instalacion todavia.
+[Descargar la ultima version](https://github.com/Xemizo/DLSS5-Tools-Releases/releases/latest)
 
-Cuando este disponible la primera version con actualizacion propia, se
-publicara en la seccion Releases. Habra que descargar esa primera version
-manualmente; las posteriores se ofreceran desde el programa.
+Para la primera instalacion, descarga el ZIP `DLSS5-Tools-vX.Y.Z-win-x64.zip`.
+Extraelo y abre `DLSS5 Autoupdater.exe`. Conserva ambos ejecutables juntos.
+Los EXE sueltos de la release estan destinados al actualizador automatico.
 
-Las descargas publicas no requeriran cuenta de GitHub, inicio de sesion ni
-tokens. Cualquier persona podra descargarlas.
+Quienes tengan una version anterior a 0.3.0 deben descargar este ZIP una vez
+manualmente. Desde 0.3.0, ambos programas comprueban las actualizaciones al
+arrancar, sin cuenta, inicio de sesion ni tokens de GitHub.
+
+## Actualizaciones
+
+Los paquetes se verifican por origen, version, tamano y SHA-256 antes de
+activarse. Cada version se instala por separado en
+`%LOCALAPPDATA%\DLSS5Tools`, conservando la anterior. Los mismos ejecutables
+que extrajiste sirven de entrada para abrir las versiones posteriores.
+
+Los perfiles, ajustes y cache existentes se conservan. Sin conexion o ante
+un error de descarga se utiliza la version disponible. La comprobacion puede
+cancelarse con `Abrir sin actualizar`.
+
+DLSS 5 Swapper sigue actualizandose desde su repositorio oficial.
+
+## Streamline y requisitos
+
+El paquete publico no incluye DLL de terceros, modelos NVIDIA ni archivos de
+juegos. Se utiliza la cache Streamline existente. En un PC nuevo, si necesitas
+Streamline para DLSSG, puedes importarlo desde una instalacion compatible con
+`Guardar Streamline` en Profile Manager.
+
+Windows PowerShell 5.1 y .NET Framework 4.x. Los ejecutables no estan firmados
+con Authenticode: Windows puede indicar que el editor es desconocido.
+Las sumas de los archivos se publican en `checksums.sha256`.
 
 ## Seguridad
 
 No introducir contrasenas ni tokens de GitHub en el programa. No adjuntar
 perfiles personales, logs o rutas privadas al informar de un problema.
+El codigo se mantiene en un repositorio privado; estas descargas son publicas.
 
-DLSS5 Tools es una herramienta independiente de DLSS 5 Swapper, NVIDIA,
-OptiScaler y ReShade. No modifica el programa DLSS 5 Swapper.
+DLSS5 Tools es independiente de DLSS 5 Swapper, NVIDIA, OptiScaler y ReShade.
+Actualizar las herramientas no modifica los archivos de los juegos.
